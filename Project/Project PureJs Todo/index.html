@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>TO DO APP</title>
+  </head>
+  <body>
+    <div class="app">
+      <center><h3>ToDo App</h3></center>
+
+      <div id="addNew">
+        <span>Add New Task Here</span>
+        <i id="myBtn" class="fa fa-plus"></i>
+      </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h4>Add a New Task</h4>
+          </div>
+
+          <div class="modal-body">
+            <form id="form">
+              <label for="Title"><b>Title</b></label>
+              <br /><br />
+              <input
+                id="title"
+                type="text"
+                placeholder="Enter a title"
+                name="title"
+                required
+              />
+              <br /><br />
+              <label for="Description"><b>Description</b></label>
+              <br /><br />
+              <textarea
+                id="des"
+                name="descrip"
+                rows="5"
+                cols="40"
+                placeholder="Enter details"
+              ></textarea>
+              <div id="msg"></div>
+              <br />
+              <button type="submit" class="btn submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="tasks"></div>
+      <br /><br />
+      <button onClick="deleteAlltask()">Delete All tasks</button>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

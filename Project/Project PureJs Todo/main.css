@@ -1,0 +1,152 @@
+/* class .
+    id #
+    style="color:rgb(40, 28, 253)"
+*/
+
+body{
+    font-family: sans-serif;
+    background-color: #e5e5e5;
+}
+.app{
+    height: 500px;
+    width: 300px;
+    border: 5px solid #abcea1;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+
+#addNew{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    padding: 5px 10px;
+    border-radius: 5px;  
+    cursor: pointer;
+    background-color: rgba(171,206,161,0.35);
+}
+
+.fa-plus{
+    padding: 3px;
+    border-radius: 3px;
+    background-color: #abcea1;
+}
+
+.fa-plus:hover {
+    background-color: darkgray;
+}
+
+
+#tasks{
+    display: grid;
+    gap: 15px;
+}
+
+i.fa-clock-o{
+    user-select: none;
+}
+  
+.fa-clock-o:hover{
+    color: red;
+}
+
+#tasks div{
+    background-color: #e2eede;
+    border: 3px solid #abcea1;
+    padding: 5px;
+    border-radius: 6px;
+    display: grid;
+    gap: 4px;
+}
+
+.options{
+    justify-self: right;
+    display: flex;
+    gap: 10px;
+}
+
+#tasks div:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .modal-body {padding: 20px 20px;}
+  
+  .modal-body form :where(input){
+    width: 80%;
+    height: 40px;
+    outline: none;
+    border-radius: 4px;
+    padding: 0 15px;
+    border: 1px solid rgb(61, 55, 67);
+} 
+.modal-body form :where(textarea){
+  width: 80%;
+  outline: none;
+  border-radius: 4px;
+  padding: 0 15px;
+  border: 1px solid rgb(61, 55, 67);
+} 
