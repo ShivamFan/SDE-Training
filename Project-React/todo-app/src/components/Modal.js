@@ -7,15 +7,18 @@ import { v4 as uuid } from "uuid";
 function Modal({ type, modalOpen, setmodalOpen, todo }) {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [status, setStatus] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (type === "update" && todo) {
       setTitle(todo.title);
       setDesc(todo.desc);
+      setStatus(todo.status);
     } else {
       setTitle("");
       setDesc("");
+      setStatus(false);
     }
   }, [type, todo, modalOpen]);
 
@@ -40,6 +43,7 @@ function Modal({ type, modalOpen, setmodalOpen, todo }) {
             id: uuid(),
             title: title,
             desc: desc,
+            status: status,
             time: new Date().toLocaleString(),
           })
         );
@@ -52,6 +56,7 @@ function Modal({ type, modalOpen, setmodalOpen, todo }) {
               ...todo,
               title,
               desc,
+              status,
             })
           );
         }

@@ -48,6 +48,7 @@ export const todoSlice = createSlice({
     },
 
     updateTodo: (state, action) => {
+      // console.log("Update Clicked");
       const todoList = window.localStorage.getItem("todoList");
       if (todoList) {
         const todoListArr = JSON.parse(todoList);
@@ -57,12 +58,32 @@ export const todoSlice = createSlice({
             todo.desc = action.payload.desc;
           }
         });
-        // window.localStorage.setItem("todoList", JSON.stringify(todoListArr));
+        window.localStorage.setItem("todoList", JSON.stringify(todoListArr));
+        state.todoList = todoListArr;
+      }
+    },
+
+    markComplete: (state, action) => {
+      // console.log("Complete Clicked");
+      const todoList = window.localStorage.getItem("todoList");
+      if (todoList) {
+        const todoListArr = JSON.parse(todoList);
+        todoListArr.forEach((todo, index) => {
+          if (todo.id === action.payload) {
+            if (!todo.status) {
+              // console.log(!todo.status);
+              todo.status = true;
+              alert("Task marked as done");
+            }
+          }
+        });
+        window.localStorage.setItem("todoList", JSON.stringify(todoListArr));
         state.todoList = todoListArr;
       }
     },
   },
 });
 
-export const { addTodo, deleteTodo, updateTodo } = todoSlice.actions;
+export const { addTodo, deleteTodo, updateTodo, markComplete } =
+  todoSlice.actions;
 export default todoSlice.reducer;
