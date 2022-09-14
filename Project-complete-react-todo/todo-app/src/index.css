@@ -1,0 +1,193 @@
+.PageTitle {
+  display: inline-block;
+  width: 100%;
+  font-family: "Poppins";
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--black-1);
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 3px solid #abcea1;
+  background: #e2eede;
+  padding: 5px;
+  display: grid;
+  gap: 4px;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+.taskItem:last-child {
+  margin-bottom: 0;
+}
+
+.todoText {
+  word-break: break-all;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--black-2);
+}
+.time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: -0.2rem;
+  color: var(--black-2);
+}
+
+.taskDetails {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.icons {
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: var(--gray-1);
+  color: var(--black-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease background-color;
+}
+
+.icons:hover {
+  background-color: rgb(49, 115, 97);
+}
+
+.filterTask {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: rgba(213, 176, 238, 0.35);
+  position: sticky;
+  left: 85%;
+  font-size: 20px;
+}
+
+.addNew {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(171, 206, 161, 0.35);
+  font-size: 25px;
+}
+
+.fa-plus {
+  padding: 3px;
+}
+
+.fa-plus:hover {
+  background-color: darkgray;
+}
+
+.submitTaskbutton:hover {
+  background-color: darkgray;
+}
+
+.modalWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalContainer {
+  background-color: #fff;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+}
+.closeButton {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  transform: translateY(-100%);
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: var(--gray-1);
+  color: var(--black-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  z-index: -1;
+}
+
+.closeButton:hover {
+  background-color: #e32525;
+  color: white;
+}
+.formTitle {
+  color: var(--black-1);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+.form {
+  width: 100%;
+}
+.form .label {
+  font-size: 1.6rem;
+  color: var(--black-1);
+}
+
+.form label input,
+.form label select {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  width: 90%;
+  padding: 1rem;
+  border: none;
+  background-color: rgb(200, 241, 212);
+  font-size: 1.6rem;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
