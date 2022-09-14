@@ -78,7 +78,6 @@ func GetTaskById(c *gin.Context) {
 
 func UpdateTaskById(c *gin.Context) {
 	id := c.Param("id")
-
 	Id, err := strconv.Atoi(id)
 	if err != nil {
 		fmt.Println("Error while conversion")

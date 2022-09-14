@@ -3,6 +3,7 @@ package main
 import (
 	"backend/connection"
 	"backend/controller"
+	"backend/middleware"
 
 	"github.com/gin-gonic/gin"
 )
@@ -10,6 +11,9 @@ import (
 func main() {
 	r := gin.Default()
 	connection.Init()
+
+	r.Use(middleware.CorsMiddleware())
+
 	r.GET("/tasks", controller.GetTasks)
 	r.GET("/task/:id", controller.GetTaskById)
 	r.POST("/task", controller.Createtask)

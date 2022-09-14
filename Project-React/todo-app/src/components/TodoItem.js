@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { format } from "date-fns/esm";
+// import { format } from "date-fns/esm";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 import { deleteTodo, markComplete } from "../slices/todoSlice";
@@ -38,10 +38,10 @@ function TodoItem({ todo }) {
           <div className="texts">
             <p className="todoText">{todo.title}</p>
             <p>{todo.desc}</p>
-            <p className="time">
+            {/* <p className="time">
               {" "}
               {format(new Date(todo.time), "p, MM/dd/yyyy")}
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="actions">

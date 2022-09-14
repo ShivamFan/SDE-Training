@@ -15,7 +15,7 @@ func CreateTask(c *gin.Context, input model.Input) {
 		fmt.Println("Error while appending the record")
 		return
 	}
-	c.JSON(http.StatusOK, "Data added successfully")
+	c.JSON(http.StatusOK, input)
 }
 
 func GetAllTasks(c *gin.Context) {
