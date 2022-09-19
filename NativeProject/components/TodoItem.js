@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Text, View, StyleSheet , Image, TouchableOpacity} from "react-native";
 import { useDispatch } from "react-redux";
 import Modals from "./Modal";
-import CardSilder from 'react-native-cards-slider';
 
 
 function TodoItem({ todo }) {
@@ -38,7 +37,6 @@ function TodoItem({ todo }) {
 
   return (
     <>
-      <CardSilder>
         <View style={[styles.taskItem, todo.is_complete? styles.Completed : styles.Incomplete]}>
           <View style={styles.taskDetails}>
               <Text style={styles.todoTitle}>
@@ -78,7 +76,7 @@ function TodoItem({ todo }) {
 
           </View>
         </View>
-        </CardSilder>
+        
         <Modals
           type={"update"}
           todo={todo}

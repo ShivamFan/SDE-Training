@@ -7,7 +7,7 @@ import TodoItem from "./TodoItem";
 function AppContent() {
   const todoList = useSelector((state) => state.todo.todos);
   const sortedTodoList = [...todoList];
-  sortedTodoList.sort((a, b) => new Date(b.time) - new Date(a.time));
+  sortedTodoList.sort((a, b) => (a.is_complete > b.is_complete) ? 1 : -1)
 
   const dispatch = useDispatch()
 
