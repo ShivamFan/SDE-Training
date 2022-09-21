@@ -51,15 +51,11 @@ function TodoItem({ todo }) {
 
   return (
     <>
-      <div className="taskItem">
+      <div className="taskItem" style={{ backgroundColor: todo.is_complete ? "#e2eede" : "white" , border: todo.is_complete ? "3px solid #abcea1" : "3px solid #4c7fc2"  }}>
         <div className="taskDetails">
           <div className="texts">
             <p className="todoText">{todo.title}</p>
             <p>{todo.description}</p>
-            {/* <p className="time">
-              {" "}
-              {format(new Date(todo.time), "p, MM/dd/yyyy")}
-            </p> */}
           </div>
         </div>
         <div className="actions">
@@ -75,7 +71,6 @@ function TodoItem({ todo }) {
             <MdEdit
               onClick={handleEdit}
               disabled={todo.is_complete}
-              style={{ backgroundColor: todo.is_complete ? "Red" : "" }}
               onKeyDown={handleEdit}
               tabIndex={0}
               role="button"
@@ -89,7 +84,6 @@ function TodoItem({ todo }) {
                 }
               }}
               disabled={todo.is_complete}
-              style={{ backgroundColor: todo.is_complete ? "Red" : "" }}
               tabIndex={0}
               role="button"
             />

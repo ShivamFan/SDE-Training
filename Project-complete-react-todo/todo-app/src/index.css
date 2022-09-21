@@ -17,8 +17,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  border: 3px solid #abcea1;
-  background: #e2eede;
+  /* border: 3px solid #abcea1;
+   */
+   /* border:3px solid #4c7fc2; */
+
   padding: 5px;
   display: grid;
   gap: 4px;

@@ -107,7 +107,6 @@ function showtask() {
       <div id = "sss">
         <span>
             <b>${data.t}</b>                 
-            <i onclick="myFunction(this)" class="fa fa-clock-o"></i>
         </span>
       
         <br>

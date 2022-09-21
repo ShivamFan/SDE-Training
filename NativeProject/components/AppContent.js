@@ -19,7 +19,7 @@ function AppContent() {
       <View style={styles.content}>
             {sortedTodoList && sortedTodoList.length > 0
               ? sortedTodoList.map((todo, i) => <TodoItem key={i} todo={todo} />)
-              : <Text>no todo found</Text>}
+              : <View style={{alignItems: 'center', margin: 30}}><Text style={{fontSize:25}}>No Todos</Text></View>}
       </View>
   );
 }
